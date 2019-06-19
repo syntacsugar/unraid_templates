@@ -1,0 +1,1 @@
+This container creates a Syslog server with Rsyslogd, logs are accessible via PimpMyLogs interface (http://pimpmylog.com).
