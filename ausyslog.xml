@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>SyslogWebUI</Name>
+  <Repository>synsugar/auspimpedsyslog</Repository>
+  <Registry>https://cloud.docker.com/repository/docker/synsugar/auspimpedsyslog</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/syntacsugar/auspimpedsyslog</Project>
+  <Overview>Capture remote syslogs and display in a nice WebUI.</Overview>
+  <Category>Network:Management Productivity: Tools:</Category>
+  <WebUI>https://syslog.mr-mrs.to/</WebUI> 
+  <Icon>http://pimpmylog.com/assets/PML.png</Icon>
+  <DateInstalled>1560982560</DateInstalled>
+  <Description>Syslog server with PimpMyLogs web interface</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>10512</HostPort>
+        <ContainerPort>512</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>admin</Value>
+      <Name>SYSLOG_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>SYSLOG_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="login username" Target="SYSLOG_USERNAME" Default="" Mode="" Description="Container Variable: SYSLOG_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="login password" Target="SYSLOG_PASSWORD" Default="" Mode="" Description="Container Variable: SYSLOG_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="This is PMLs Web Port." Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">1080</Config>
+  <Config Name="This is the syslog port." Target="512" Default="" Mode="udp" Description="Container Port: 512" Type="Port" Display="always" Required="false" Mask="false">10512</Config>
+</Container>
