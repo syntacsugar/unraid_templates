@@ -9,7 +9,7 @@
   <Project>https://github.com/syntacsugar/auspimpedsyslog</Project>
   <Overview>Capture remote syslogs and display in a nice WebUI.</Overview>
   <Category>Network:Management Productivity: Tools:</Category>
-  <WebUI>https://syslog.mr-mrs.to/</WebUI> 
+  <WebUI>http://[IP]:[PORT:80]</WebUI> 
   <Icon>http://pimpmylog.com/assets/PML.png</Icon>
   <DateInstalled>1560982560</DateInstalled>
   <Description>Syslog server with PimpMyLogs web interface</Description>
